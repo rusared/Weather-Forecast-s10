@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/llDayForecast"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llDayForecast"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="horizontal"
     android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/rounded_corners"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -21,7 +24,7 @@
             android:textColor="@color/black"
             android:textSize="28sp"
             tools:text="26.02.2025"
-            android:layout_marginBottom="4dp"/>
+            android:layout_marginBottom="4dp" />
 
         <TextView
             android:id="@+id/tvDayOfWeek"
@@ -30,7 +33,7 @@
             android:textSize="24sp"
             android:textColor="@color/black"
             android:layout_marginBottom="4dp"
-            tools:text="Понедельник"/>
+            tools:text="Понедельник" />
 
     </LinearLayout>
 
@@ -38,9 +41,8 @@
         android:id="@+id/ivCloudCover"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:tint="@color/blue"
-        android:src="@drawable/baseline_cloud_24"
-        android:padding="8dp"/>
+        tools:src="@drawable/baseline_wb_sunny_24"
+        android:padding="8dp" />
 
     <TextView
         android:id="@+id/tvTemperature"
