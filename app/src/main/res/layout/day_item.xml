@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/llDayForecast"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            tools:text="26.02.2025"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp"
+            tools:text="Понедельник"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivCloudCover"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:tint="@color/blue"
+        android:src="@drawable/baseline_cloud_24"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:padding="8dp"
+        tools:text="+23" />
+
+</LinearLayout>
