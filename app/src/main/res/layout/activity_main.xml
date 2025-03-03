@@ -6,13 +6,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="32dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ПРОГНОЗ ПОГОДЫ"
+        android:layout_gravity="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDayForecast"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical" />
+        android:padding="4dp"
+        />
 
 </LinearLayout>
