@@ -7,6 +7,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.time.LocalDate
+import java.time.DayOfWeek
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,13 +18,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recycler = findViewById<RecyclerView>(R.id.rvDayForecast)
-        val dayList = listOf(
-            Day("28.02.2025", "Пятница", true, -5),
-            Day("29.02.2025", "Суббота", false, 15),
-            Day("30.02.2025", "Воскресенье", true, -9),
-            Day("31.02.2025", "Понедельник", false, 27),
-        )
+        val dayList = mutableListOf<Day>()
+        for (i in 0..10) {
+            var date = LocalDate.now().plusDays(i.toLong())
+            var dayOfWeek = date.dayOfWeek.toString()
+            var day = Day(date.toString(), dayOfWeek, Random.nextBoolean(), Random.nextInt(-10, 31))
+            dayList.add(day)
+        }
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = DayAdapter(dayList)
     }
+
 }
